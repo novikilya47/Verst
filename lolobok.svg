@@ -1,21 +1,29 @@
-    <svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" >
-        <ellipse cx="200" cy="180" rx="50" ry="15" fill="#c8c8c8" />  
-        <circle cx="200" cy="100" r="80" fill="orange" />
-        <circle cx="195" cy="80" r="30" fill="white" />
-        <circle cx="230" cy="80" r="30" fill="white" />
-        <circle cx="240" cy="80" r="7" />
-        <circle cx="205" cy="80" r="7" />
-        <circle cx="215" cy="110" r="10" />
-        <ellipse style="transform: rotate(15deg)" cx="120" cy="90" rx="50" ry="20" fill="orange"/>  
-        <ellipse cx="205" cy="135" rx="15" ry="10" fill="red" />
-        <polygon points="140,50 167,30 140,22" stroke="orange" fill="black" stroke-width="4"/>
-        <polygon points="230,30 260,50 260,22" stroke="orange" fill="black" stroke-width="4"/>
-        <polygon points="50,105 77,100 70,125" fill="white"/>
-        <ellipse cx="500" cy="180" rx="50" ry="15" fill="#c8c8c8" />  
-        <circle cx="500" cy="100" r="80" fill="yellow" />
-        <circle cx="460" cy="80" r="30" fill="white" />
-        <circle cx="495" cy="80" r="30" fill="white" />
-        <circle cx="455" cy="80" r="7" />
-        <circle cx="490" cy="80" r="7" />
-        <ellipse cx="475" cy="135" rx="10" ry="15" fill="red" /> 
-    </svg>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1024.000000pt" height="722.000000pt" viewBox="0 0 1024.000000 722.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,722.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M2625 6888 c-16 -5 -68 -19 -115 -32 l-85 -22 115 -77 115 -77 3 55
+c2 30 2 79 0 108 l-3 53 -30 -8z"/>
+<path d="M1500 6784 l0 -106 33 24 c17 14 62 47 100 73 37 27 67 52 67 55 0 6
+-169 60 -189 60 -7 0 -11 -39 -11 -106z"/>
+<path d="M2082 6387 c-28 -30 -28 -68 1 -95 30 -28 68 -28 95 1 28 30 28 68
+-1 95 -30 28 -68 28 -95 -1z"/>
+<path d="M2432 6387 c-28 -30 -28 -68 1 -95 30 -28 68 -28 95 1 28 30 28 68
+-1 95 -30 28 -68 28 -95 -1z"/>
+<path d="M4582 6387 c-28 -30 -28 -68 1 -95 30 -28 68 -28 95 1 28 30 28 68
+-1 95 -30 28 -68 28 -95 -1z"/>
+<path d="M4932 6387 c-28 -30 -28 -68 1 -95 30 -28 68 -28 95 1 28 30 28 68
+-1 95 -30 28 -68 28 -95 -1z"/>
+<path d="M2181 6126 c-89 -49 -53 -186 49 -186 33 0 48 6 71 29 80 81 -20 212
+-120 157z"/>
+<path d="M4775 5907 c-37 -37 -51 -92 -40 -159 9 -49 60 -108 95 -108 12 0 37
+15 55 33 37 37 51 92 40 159 -9 49 -60 108 -95 108 -12 0 -37 -15 -55 -33z"/>
+<path d="M2040 5868 c-149 -76 9 -226 169 -162 92 36 96 125 8 165 -57 25
+-122 24 -177 -3z"/>
+</g>
+</svg>
