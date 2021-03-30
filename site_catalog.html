@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    body{
+        margin: 0px; 
+        font-family: 'Merriweather', serif;
+        width: auto;
+        background-color: #f2f1ef;
+        color: #333332;
+    }
+
+    .header{
+        display: flex; 
+        background-color: white;
+        align-items: center;
+        height: 80px;
+        justify-content: space-between;
+        width: 100vw;
+        position: fixed;
+        z-index: 2;
+        border-bottom: black solid 1px;
+    }
+
+    .header_logo{
+        text-align: center;
+        width: 13%;
+        width: 70px;
+        height: 70px;
+        padding-left: 2%;
+    }
+
+    .header_menu{
+        width: 65%;
+        align-self: stretch;
+        display: flex;
+    }
+
+    .topmenu{
+        width: 100%;
+        display: flex;
+        list-style-type:none;
+        padding-inline-start: 0px;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        align-self: stretch;
+    }
+
+    .topmenu > li {
+        position: relative;
+        width: 20%;
+        height: auto;
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+
+    .topmenu > li > a {  
+        font-size: 18px;
+        color: black;
+    }
+
+    .submenu a:hover {
+        font-weight: bold;
+    }
+
+    .submenu {
+        width: 70%;
+        position: absolute; 
+        z-index: 2;
+        background: white;
+        visibility: hidden;
+        opacity: 0;
+        top:80px; 
+        left:0px;  
+        border: black solid 1px;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .submenu li {
+        position: relative;
+        list-style-type:none;
+        padding: 10px 0px;   
+    }
+
+    .submenu li a {
+        font-size: 16px;
+        color: black;
+    }
+
+    li:hover > .submenu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    li:hover{
+        font-weight: bold;
+    }
+
+    .header_search{
+        width:25%;
+    }
+
+    form {
+    position: relative;
+    width: 90%;
+    border: black solid 1px;
+    }
+
+   .search_input, .search_button {
+    outline: none;
+    background: transparent;
+    border: none;
+    }
+
+    .search_input {
+    width: 100%;
+    height: 42px;
+    padding-left: 15px;
+    border: none;
+    }
+
+    .search_button {
+    border: none;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    }
+
+    .search_button::before{
+    content: '';
+    background: url('../Images_site/outline_search_black_36dp.png');
+    background-repeat: no-repeat;
+    height: 42px;
+    width: 42px;
+    position:absolute;
+    left: 3px;
+    top: 3px;
+    }
+
+    .posters{
+        display: flex;
+        justify-content: space-evenly; 
+        margin-bottom: 4%;
+    }
+
+    img{
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    p{
+        margin-block-end: 0em;
+    }
+
+    h1{
+        text-align: center;
+        margin-block-start: 1em;
+        margin-block-end: 0.8em;
+        width: 88%;
+        border-bottom: solid black 1px;
+        margin: auto;
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+    }
+
+    .list{
+        width: 25%; 
+        height: auto;
+        border: black 1px solid;
+        transition: 0.3s;
+        background-color: white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .list:hover {
+    transform: scale(1.05);
+    }
+
+    .poster_container{
+        width: 90%; 
+        height: auto; 
+        margin: 4.5%; 
+        position: relative;
+    }
+
+    html,body {
+	height: 100%;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        padding-top: 100px;
+    }
+
+    .content {
+	    flex: 1 0 auto;
+    }
+
+    .pagination ul { 
+        list-style: none;
+        text-align: center;
+        padding-inline-start: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pagination li {
+    display: inline-block;
+    }
+        
+    .pagination a {
+    display: block;
+    background-color: white;
+    padding: 7px 14px;
+    border: black 1px solid;
+    margin: 10px;
+    } 
+
+    .pagination a:hover{
+    background-color: #333332;
+    color: wheat;
+    }
+
+    footer {
+        background-color: #333332;
+        color: wheat; 
+        flex-shrink: 0;   
+    }
+
+    .footer_1{
+        display: flex; 
+        justify-content: space-evenly; 
+    }
+
+    .footer_2{
+        font-size: 13px;
+        text-align: center;
+        border-top: wheat solid 1px;
+        padding-bottom: 10px;
+    }
+
+    .footer_column{
+        width: 20%;
+    }
+
+    .footer_column_title{
+        font-size: 27px;
+        margin: 6px;
+        margin-left: 0px;
+    }
+
+    footer a{
+        text-decoration: none;
+        color: white;    
+    }
+
+    footer ul{    
+        list-style: none;
+    }
+
+    footer li{
+        font-size: 16px;
+        margin: 4px;
+        margin-left: 0px;
+    }
+
+</style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header_logo">
+            <img src="../Images_site/logo.png" title="logo">
+        </div>
+
+        <div class="header_menu">
+            <ul class="topmenu">
+                <li><a href="">Постеры</a>
+                    <ul class="submenu">
+                        <li><a href="">Смотреть все</li>
+                        <li><a href="">Кино</li>
+                        <li><a href="">Сериалы</li>
+                    </ul>
+                </li>
+
+                <li><a href="">Картины</a>
+                    <ul class="submenu">
+                        <li><a href="">Смотреть все</li>
+                        <li><a href="">Природа</li>
+                        <li><a href="">Абстракция</li>
+                        <li><a href="">Цветы</li>
+                        <li><a href="">Реплики</li>
+                    </ul>
+                </li>
+
+                <li><a href="">Оплата и доставка</a></li>
+            </ul>
+        </div>
+
+        <div class="header_search">
+            <form action="" method="get">
+                <input class="search_input" name="s" placeholder="Искать здесь..." type="search">
+                <button class="search_button" type="submit"></button>
+            </form>
+        </div> 
+    </div>
+
+
+    <div class="wrapper">
+        <div class="content">
+            <h1>Постеры</h1>
+
+            <div class="posters">
+                <div class="list">
+                    <a href="#">
+                        <div class="poster_container">
+                            <img src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/serial.jpg" title="что-то">
+                        </div>
+                    </a>   
+                </div>
+
+                <div class="list">
+                    <div class="poster_container">
+                        <img src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/serial.jpg" title="что-то">
+                    </div>
+                </div>
+
+                <div class="list">
+                    <a href="#">
+                        <div class="poster_container">
+                            <img class="posterы" src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/abstract.jpg" title="что-то">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="posters">
+                <div class="list">
+                    <a href="#">
+                        <div class="poster_container">
+                            <img src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/serial.jpg" title="что-то">
+                        </div>
+                    </a>   
+                </div>
+
+                <div class="list">
+                    <div class="poster_container">
+                        <img src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/serial.jpg" title="что-то">
+                    </div>
+                </div>
+
+                <div class="list">
+                    <a href="#">
+                        <div class="poster_container">
+                            <img class="posterы" src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/abstract.jpg" title="что-то">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="posters">
+                <div class="list">
+                    <a href="#">
+                        <div class="poster_container">
+                            <img src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/serial.jpg" title="что-то">
+                        </div>
+                    </a>   
+                </div>
+
+                <div class="list">
+                    <div class="poster_container">
+                        <img src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/serial.jpg" title="что-то">
+                    </div>
+                </div>
+
+                <div class="list">
+                    <a href="#">
+                        <div class="poster_container">
+                            <img class="posterы" src="https://raw.githubusercontent.com/novikilya47/Verst/main/Images_site/abstract.jpg" title="что-то">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <ul>
+                    <li><a href="https://www.youtube.com/" title="ссылка на ютуб" target=_blank>1</a></li>
+                    <li><a href="https://www.youtube.com/" title="ссылка на ютуб" target=_blank>2</a></li>
+                    <li><a href="https://www.youtube.com/" title="ссылка на ютуб" target=_blank>3</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
+        <footer>
+            <div class="footer_1">
+                <div class="footer_column">
+                    <ul>
+                        <li class="footer_column_title">Постеры</li>
+                        <li><a href="">Кино</a></li>
+                        <li><a href="">Сериалы</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <ul>
+                        <li class="footer_column_title">Картины</li>
+                        <li><a href="">Природа</a></li>
+                        <li><a href="">Абстракция</a></li>
+                        <li><a href="">Цветы</a></li>
+                        <li><a href="">Реплики</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <ul>
+                        <li class="footer_column_title">Информация</li>
+                        <li><a href="">Оплата и доставка</a></li>
+                        <li><a href="">Гарантия и возврат</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <ul>
+                        <li>Узнавайте о новинках первыми!</li>
+                        <li>Станьте нашим подписчиком.</li>
+                        <li>
+                            <object data="https://svgshare.com/i/VMu.svg"
+                            type="image/svg+xml" width="30" height="30"></object>
+                            <object data="https://svgshare.com/i/VMN.svg"
+                            type="image/svg+xml" width="30" height="30"></object>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_2">
+                <p>Интернет-магазин постеров coolname.by</p>
+                <p>Время работы: понедельник-суббота, 8.00 – 20.00</p>
+                <p>coolname.by. &copy; 2021</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
